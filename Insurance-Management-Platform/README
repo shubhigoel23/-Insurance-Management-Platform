@@ -1,0 +1,58 @@
+path of the actual code : C:\Users\DELL\Desktop\_Insurance Management Platform\Insurance-Management-Platform\src\test\java\com\InsuranceManagementPlatform\Insurance\Management\Platform
+When creating a new Spring Boot project, you can use the Spring Initializr to generate a new project with the required dependencies already included. 
+The dependencies that are included depend on the features you select when generating the project, but some common dependencies that are included by default are:
+
+spring-boot-starter-web: This dependency includes everything you need to create a web application with Spring Boot, including the Spring MVC framework,
+ Tomcat as the default embedded container, and support for various data formats such as JSON and XML.
+
+spring-boot-starter-data-jpa: This dependency includes everything you need to work with databases using the Java Persistence API (JPA), including Hibernate as the 
+default JPA implementation, and a database driver for your selected database (such as MySQL, PostgreSQL, or Oracle).
+
+spring-boot-starter-test: This dependency includes everything you need to write and run tests for your Spring Boot application, including JUnit, Mockito, and the 
+Spring Test Framework.
+
+spring-boot-starter-security: This dependency includes everything you need to secure your Spring Boot application, including Spring Security and support for various 
+authentication and authorization mechanisms.
+
+spring-boot-starter-actuator: This dependency includes everything you need to monitor and manage your Spring Boot application in production, including health checks, 
+metrics, and endpoints for monitoring and management.
+
+These are just a few of the most common dependencies that are included in a Spring Boot project by default. You can add or remove dependencies as needed for your 
+specific application requirements.
+
+Requirements:
+1. Set up a new Spring Boot project using the Spring Initializr (https://start.spring.io/) and
+select the necessary dependencies (e.g., Spring Web, Spring Data JPA, and an
+embedded database like H2 or Apache Derby).
+2. Create the necessary domain models and their relationships:
+a. Client: Represents a client with properties such as name, date of birth, address,
+and contact information.
+b. InsurancePolicy: Represents an insurance policy with properties like policy
+number, type, coverage amount, premium, start date, and end date. Each policy
+should be associated with a client.
+c. Claim: Represents an insurance claim with properties like claim number,
+description, claim date, and claim status. Each claim should be associated with
+an insurance policy.
+3. Implement RESTful APIs for the following actions:
+a. Clients:
+i. GET /api/clients: Fetch all clients.
+ii. GET /api/clients/{id}: Fetch a specific client by ID.
+iii. POST /api/clients: Create a new client.
+iv. PUT /api/clients/{id}: Update a client's information.
+v. DELETE /api/clients/{id}: Delete a client.
+b. Insurance Policies:
+i. GET /api/policies: Fetch all insurance policies.
+ii. GET /api/policies/{id}: Fetch a specific insurance policy by ID.
+iii. POST /api/policies: Create a new insurance policy.
+iv. PUT /api/policies/{id}: Update an insurance policy.
+v. DELETE /api/policies/{id}: Delete an insurance policy.
+c. Claims:
+i. GET /api/claims: Fetch all claims.
+ii. GET /api/claims/{id}: Fetch a specific claim by ID.
+iii. POST /api/claims: Create a new claim.
+iv. PUT /api/claims/{id}: Update a claim's information.
+v. DELETE /api/claims/{id}: Delete a claim.
+4. Use Spring Data JPA to create repositories for the domain models and interact with the
+embedded database or mysql
+5. Implement exception handling and validation to ensure proper API usage and data
+integrity.
